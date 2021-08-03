@@ -21,6 +21,8 @@ if __name__ == '__main__':
             # Parse the input
             parsed_expression = parse(input_expression)
             # Evaluate the input
-            print(evaluate(parsed_expression, global_env))
+            response = evaluate(parsed_expression, global_env)
+            if response is not None:
+                print(response)
         except Exception as e:
             raise SyntaxError
